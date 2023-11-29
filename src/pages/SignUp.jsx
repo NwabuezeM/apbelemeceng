@@ -27,11 +27,11 @@ export default function SignUp() {
         </div>
         <div className='w-full md:w-[67%] lg:w-[40%] lg:ml-20'>
           <form>
-          <input type='text' id='name' value={name} onChange={onChange} className='mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out' placeholder='Full Name'/>
-          <input type='email' id='email' value={email} onChange={onChange} className='mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out' placeholder='Email Address'/>
+          <input type='text' id='name' value={name} onChange={onChange} className='mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out' placeholder='Full Name' required/>
+          <input type='email' id='email' value={email} onChange={onChange} className='mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out' placeholder='Email Address' required/>
             <div className='relative mb-6'>
             <input type={showPassword ? "text" : "password"} id='password' value={password} onChange={onChange} className='w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out' placeholder='Password'/>
-            {showPassword ? <FaEyeSlash className='absolute top-3.5 right-3 text-xl cursor-pointer' onClick={() => setShowPassword((prevState) => !prevState)} /> : <FaEye className='absolute top-3.5 right-3 text-xl cursor-pointer' onClick={() => setShowPassword((prevState) => !prevState)} />
+            {showPassword ? <FaEyeSlash className='absolute top-3.5 right-3 text-xl cursor-pointer' onClick={() => setShowPassword((prevState) => !prevState)} /> : <FaEye className='absolute top-3.5 right-3 text-xl cursor-pointer' onClick={() => setShowPassword((prevState) => !prevState)} required />
 
 }
             </div>
